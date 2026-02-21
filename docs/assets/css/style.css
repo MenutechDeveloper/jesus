@@ -3,6 +3,7 @@
     --primary-red: #CE1126;
     --primary-yellow: #FFCC00;
     --primary-white: #FFFFFF;
+    --white: #FFFFFF;
     --dark-charcoal: #1a1a1a;
     --light-cream: #FFF8F0;
     --accent-gold: #FFB74D;
@@ -434,7 +435,9 @@ body {
     font-size: clamp(1.4rem, 3vw, 2.2rem);
     font-weight: 500;
     margin-bottom: 50px;
-    text-shadow: 1px 1px 8px rgba(255, 255, 255, 0.6);
+    /* Cambio: Texto en blanco y sombra negra */
+    color: var(--primary-white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -946,7 +949,6 @@ body {
             display: block;
         }
 
-        /* Controles del carrusel */
         .carousel-control {
             position: absolute;
             top: 50%;
@@ -980,7 +982,7 @@ body {
             right: 0;
         }
 
-        /* Indicadores */
+
         .carousel-indicators {
             display: flex;
             justify-content: center;
@@ -1004,7 +1006,6 @@ body {
             border-color: rgba(19, 136, 8, 0.3);
         }
 
-        /* Botón de galería */
         .gallery-button {
             display: inline-block;
             background: var(--dark-charcoal);
@@ -1028,7 +1029,7 @@ body {
             box-shadow: 0 12px 30px rgba(19, 136, 8, 0.3);
         }
 
-        /* Etiqueta para imágenes */
+
         .image-label {
             position: absolute;
             bottom: 0;
@@ -1289,7 +1290,6 @@ body {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para eliminar el fondo de cuadros en iframes */
 .map-container iframe {
     width: 100%;
     height: 100%;
@@ -1297,7 +1297,7 @@ body {
     background-color: transparent !important;
 }
 
-/* Para asegurar que no haya fondos con patrón en los iframes */
+
 iframe {
     background-color: transparent;
     background-image: none !important;
@@ -1606,8 +1606,11 @@ iframe {
     }
     
     .footer-bottom-content {
+        display: flex;
         flex-direction: column;
         gap: 10px;
+        text-align: center;
+        align-items: center;
     }
 }
 
@@ -1924,7 +1927,7 @@ iframe {
 }
 
 .mobile-nav-link {
-    color: var(--white);
+    color: #ffffff !important; 
     font-size: 1.5rem;
     font-weight: 600;
     transition: var(--transition);
@@ -1935,6 +1938,6 @@ iframe {
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-    color: var(--primary-yellow);
+    color: var(--primary-yellow) !important;
     padding-left: 15px;
 }
